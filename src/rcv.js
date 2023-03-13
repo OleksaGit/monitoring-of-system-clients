@@ -16,7 +16,8 @@ server.on('message', (message) => {
 });
 
 setInterval(() => {
-	console.log(clientsMap.size)
+	//the total number of clients who have transferred data
+	//console.log(clientsMap.size)
 	const now = Date.now();
 	for (const [clientKey, lastActive] of clientsMap) {
 		if (now - lastActive > timeout) {

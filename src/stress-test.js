@@ -50,7 +50,6 @@ async function sendBatchQueries(messages) {
     console.log('Start of sending')
     await Promise.all(promises);
     console.log('Sending complete')
-
 }
 
 /**
