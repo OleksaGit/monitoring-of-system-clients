@@ -1,9 +1,9 @@
 import cluster from 'node:cluster';
-import { availableParallelism } from 'node:os';
+import os from 'os'
 import process from 'node:process';
 import dgram from "dgram";
 
-const numCPUs = availableParallelism();
+const numCPUs = os.cpus().length;
 const port = 2222;
 const timeout = 60000;
 
@@ -30,7 +30,7 @@ if (cluster.isMaster) {
 		const now = Date.now();
 		for (const [clientKey, lastActive] of clientsMap) {
 			if (now - lastActive > timeout) {
-				console.log(`нет связи с скриптом "trni.js. ${clientKey}`);
+				console.log(`Нет связи с скриптом "trni.js. ${clientKey}`);
 			}
 		}
 	}, timeout / 4);

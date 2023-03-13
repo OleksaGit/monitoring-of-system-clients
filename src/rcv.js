@@ -20,7 +20,7 @@ setInterval(() => {
 	const now = Date.now();
 	for (const [clientKey, lastActive] of clientsMap) {
 		if (now - lastActive > timeout) {
-			console.log(`нет связи с скриптом "trni.js. ${clientKey}`);
+			console.log(`Нет связи с скриптом "trni.js ${clientKey}`);
 		}
 	}
 }, timeout / 4);

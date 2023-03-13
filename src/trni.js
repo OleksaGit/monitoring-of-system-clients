@@ -4,7 +4,7 @@ const client = dgram.createSocket('udp4');
 const host = 'localhost';
 const port = 2222;
 const interval = 6000;
-const nameControlPoint = 'Ivan Ivanovych'
+const nameControlPoint = 'Ivan Ivanovych Ivaschenko'
 
 /**
  * send message
